@@ -448,7 +448,7 @@ var g_guns = new Array
    new gElem(    'Flintlock',     'F',    'Flintlock*', 3, 1,   1, 1,'Bullet', 1,     '*', 0, 1,'x',   100),
    new gElem(    'Percussion',    'P',   'Percussion*', 4, 1,   1, 1,'Bullet', 1,     '*', 0, 1,'x',   100),
 //   new gElem(      'Pistol',      'M',     'Miquelet*', 3, 1,   2, 0,'Bullet', 1,     '*', 0, 1,'x',   500),
-   new gElem(     'Shotgun',      'S',       'Shotgun', 4, 2,   4, 0,'Bullet', 2,     '*', 0, 2,'x',   300),
+   new gElem(     'Shotgun',      'S',       'Shotgun', 4, 2,   4, 0,'Frag', 2,     '*', 0, 2,'x',   300),
    new gElem(  'Machinegun',     'Mg',    'Machinegun', 6, 5,   8,-1,'Bullet', 4,     '*', 0, 4,'x',  3000),
    new gElem(  'Designator',     'Pj',     'Projector', 9, 0,   1, 0,     '*', 1,     '*', 0, 1,'x',   300),
    new gElem(  'Designator',      'D',    'Designator', 7, 5,  10,-1,     '*', 1,     '*', 0, 1,'x',  2000),
@@ -495,9 +495,9 @@ var g_descriptors = new Array
 
    new gElem(      'Pistol',  'Basic',       '(blank)', 0, 0, 1.0, 0,     '*', 0,     '*', 0, 0,'x',     1),
    new gElem(      'Pistol',     'Ac',   'Accelerator', 4, 0, 0.6, 0,'Bullet', 2,     '*', 0, 2,'x',     3),
-   new gElem(      'Pistol',      'G',        '*Gauss', 7, 0, 0.6, 0,'Bullet', 2,     '*', 0, 3, 'x',    4),
-   new gElem(      'Pistol',      'L',         'Laser', 5, 4, 1.2, 0,  'Burn', 2,   'Pen', 2, 4,'x',     2),
-   new gElem(      'Pistol',      'M',       'Machine', 0, 3, 1.2, 0,'Bullet', 2,     '*', 0, 0,'x',    1.5),  
+   new gElem(      'Pistol',      'G',        '*Gauss', 7, 0, 0.6, 0,'Bullet', 2,     '*', 0, 2, 'x',    4),
+   new gElem(      'Pistol',      'L',         'Laser', 5, 0, 1.2, 0,  'Burn', 2,   'Pen', 2, 4,'x',     2),
+   new gElem(      'Pistol',      'M',       'Machine', 0, 2, 1.2, 0,'Bullet', 2,     '*', 0, 2,'x',    1.5),  
    new gElem(      'Pistol',     'St',          'Stun', 6,-1, 0.5, 0,  'Stun', 2,       '*', 0, 2,'x',    1),
    new gElem(      'Pistol',      'P',        '*Plasma', 12,3, 1.2, 1,   'Pen', 3,  'Burn', 4, 7,'x',    20),  
    new gElem(      'Pistol',    'Psi',        '*Neural', 13,2, 1.0, 0,   'Psi', 3,     '*', 0, 3,'x',     9),
@@ -511,9 +511,9 @@ var g_descriptors = new Array
    new gElem(  'Machinegun',  'Basic',       '(blank)', 0, 0, 1.0, 0,     '*', 0,     '*', 0, 0,'x',     1),
    new gElem(  'Machinegun',     'aF',    'Anti-Flyer', 4, 6, 6.0, 0,  'Frag', 1, 'Blast', 3, 4,'x',     3),
    new gElem(  'Machinegun',      'A',       'Assault', 2, 4, 0.8, 0,  'Bang', 1, 'Blast', 2, 3,'x',   1.5),
-   new gElem(  'Machinegun',      'S',           'Sub',-1, 2, 0.3, 0,'Bullet',-1,     '*', 0,-1,'x',   0.9),
+   new gElem(  'Machinegun',      'S',           'Sub',-1, 3, 0.3, 0,'Bullet',-1,     '*', 0,-1,'x',   0.9),
 
-   new gElem(  'Designator',      'A',          'Acid', 0, 3, 1.0, 1,  'Acid', 2,   'Pen', 2, 4,'x',     3),
+   new gElem(  'Designator',      'A',          'Acid', 0, 3, 1.0, 1,'Corrode', 2,  'Pen', 3, 5,'x',     3),
    new gElem(  'Designator',      'H',          'Fire', 0, 1, 0.9, 0,  'Burn', 3,   'Pen', 3, 6,'x',     2),
    new gElem(  'Designator',      'P',    'Poison_Gas', 0, 2, 1.0, 0,   'Gas', 3,'Poison', 3, 6,'x',     3),
    new gElem(  'Designator',      'S',        'Stench', 3, 2, 0.4, 0,'Stench', 3,     '*', 0, 3,'x',   1.2),
@@ -522,7 +522,7 @@ var g_descriptors = new Array
    new gElem(  'Designator',      'F',         'Flash',-1, 2, 0.5, 0, 'Flash', 3,     '*', 0, 3,'x',   1.5),
    new gElem(  'Designator',      'C',        'Freeze', 1, 3, 1.0, 1,  'Cold', 3,     '*', 0, 3,'x',     3),
    new gElem(  'Designator',      'G',          'Grav', 5, 2, 3.0, 0,  'Grav', 3,     '*', 0, 3,'x',    20),
-   new gElem(  'Designator',      'L',         'Laser','5',0, 1.2, 0,  'Burn', 3,   'Pen', 3, 6,'x',     6),
+   new gElem(  'Designator',      'L',         'Laser', 5, 0, 1.2, 0,  'Burn', 3,   'Pen', 3, 6,'x',     6),
    new gElem(  'Designator',      'M',           'Mag', 4, 1, 2.0, 0,   'EMP', 3,   'Mag', 3, 6,'x',    15),
    new gElem(  'Designator',    'Psi',       'Psi_Amp', 4, 2, 1.0, 0,   'Psi', 3,     '*', 0, 3,'x',     9),
    new gElem(  'Designator',      'R',           'Rad', 1, 4, 1.0, 2,   'Rad', 3,     '*', 0, 3,'x',     8),
@@ -560,7 +560,7 @@ var g_burdens = new Array
    new gElem(      'Burden',      'M',           'Med', 0, 0,  1.0,  0,  '*',      0,     '*', 0, 0,'x',   1.0),
    new gElem(      'Burden',      'R',    'Recoilless', 1,-1,  1.2,  0,  '*',      1,     '*', 0, 1,'x',   3.0),
    new gElem(      'Burden',     'Sn',          'Snub', 1,'=2',0.7, -3,  '*',      1,     '*', 0, 1,'x',   1.5),
-   new gElem(      'Burden',     'Vh',            'Vh', 0,'=5',4.0,  4,  '*',      5,     '*', 0, 5,'hi',  5.0), // my D was 2
+   new gElem(      'Burden',     'Vh',            'Vh', 0, 5,  4.0,  4,  '*',      5,     '*', 0, 5,'hi',  5.0), // my D was 2
    new gElem(      'Burden',     'Vl',            'Vl', 1,-2,  0.6, -2,  '*',     -1,     '*', 0,-1,'x',   2.0),
    new gElem(      'Burden',    'Vrf',           'VRF', 2, 0,  14.0, 5,  '*',      1,     '*', 0, 1,'hi',  9.0), 
    new gElem(      'Burden',    'Vrf',       'VRF(CT)', 2, 0,   7.0, 5,  '*',      3,     '*', 0, 1,'hi',  9.0)  
@@ -570,19 +570,20 @@ var g_stages = new Array
 ( 
 //                   cl,           co,           na,    tl, rng, mass, b, h1, d1, h2, d2, d, x,   cr 
    new gElem(        'Stage',   'None',       '(blank)', 0, 0, 1.0, 0,    '*',     0,     '*', 0, 0,'x',   1.0),
-   new gElem(        'Stage',      'A',           'Adv', 3, 0, 0.8,-2,    '*',     2,     '*', 0, 2,'x',   2.0),
-   new gElem(        'Stage',    'Alt',           'Alt', 1, 1, 1.1, 0,    '*',     2,     '*', 0, 2,'x',   1.1),
-   new gElem(        'Stage',      'B',         'Basic', 0, 0, 1.3, 0,    '*',     0,     '*', 0, 0,'x',   0.7),
+   new gElem(        'Stage',      'A',           'Adv', 3, 0, 0.8,-3,    '*',     2,     '*', 0, 2,'x',   2.0),
+   new gElem(        'Stage',    'Alt',           'Alt', 0, 1, 1.1, 0,    '*',     2,     '*', 0, 2,'x',   1.1),
+   new gElem(        'Stage',      'B',         'Basic', 0, 0, 1.3, 1,    '*',     0,     '*', 0, 0,'x',   0.7),
    new gElem(        'Stage',      'E',         'Early',-1,-1, 1.7, 1,    '*',     0,     '*', 0, 0,'x',   1.2),
-   new gElem(        'Stage',      'X',          'Exp.',-2,-1,   2, 3,    '*',     0,     '*', 0, 0,'x',   4.0),
+   new gElem(        'Stage',      'X',          'Exp.',-3,-1,   2, 3,    '*',     0,     '*', 0, 0,'x',   4.0),
    new gElem(        'Stage',      'a',          'Arch',-2,-2,   2, 3,    '*',     0,     '*', 0, 0,'x',   1.1),  // Archaic
-   new gElem(        'Stage',     'Im',          'Impv', 1, 0,   1, 0,    '*',     1,     '*', 0, 1,'x',   1.1),
+   new gElem(        'Stage',    'Gen',       'Generic', 1, 0,   1, 0,    '*',     0,     '*', 0, 1,'x',   0.5),
+   new gElem(        'Stage',     'Im',          'Impv', 1, 0,   1,-1,    '*',     1,     '*', 0, 1,'x',   1.1),
    new gElem(        'Stage',    'Mod',           'Mod', 2, 0, 0.9, 0,    '*',     1,     '*', 0, 1,'x',   1.2),
    new gElem(        'Stage',     'Pr',          'Prec', 6, 3,   4, 2,    '*',     0,     '*', 0, 0,'x',   5.0),
-   new gElem(        'Stage',      'P',         'Proto',-1,-1, 1.9, 2,    '*',     0,     '*', 0, 0,'x',   3.0),
+   new gElem(        'Stage',      'P',         'Proto',-2,-1, 1.9, 2,    '*',     0,     '*', 0, 0,'x',   3.0),
    new gElem(        'Stage',      'R',        'Remote', 1, 0,   1, 0,    '*',     0,     '*', 0, 0,'x',   7.0),
    new gElem(        'Stage',     'Sn',        'Sniper', 1, 1, 1.1, 1,    '*',     0,     '*', 0, 0,'X',   2.0),
-   new gElem(        'Stage',     'St',           'Std', 1, 0,   1, 0,    '*',     1,     '*', 0, 1,'x',   1.0),
+   new gElem(        'Stage',     'St',           'Std', 0, 0,   1, 0,    '*',     1,     '*', 0, 1,'x',   1.0),
    new gElem(        'Stage',      'T',        'Target', 0, 0, 1.1, 1,    '*',     0,     '*', 0, 0,'x',   1.5),
-   new gElem(        'Stage',     'Ul',           'Ult', 4, 0, 0.7,-2,    '*',     2,     '*', 0, 2,'x',   1.4)
+   new gElem(        'Stage',     'Ul',           'Ult', 4, 0, 0.7,-4,    '*',     2,     '*', 0, 2,'x',   1.4)
 );
